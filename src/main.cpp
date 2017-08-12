@@ -43,6 +43,8 @@ int main()
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
 
+
+
     if (length && length > 2 && data[0] == '4' && data[1] == '2')
     {
 
@@ -106,8 +108,11 @@ int main()
     	  ground_truth.push_back(gt_values);
           
           //Call ProcessMeasurment(meas_package) for Kalman filter
+
+//////
     	  ukf.ProcessMeasurement(meas_package);    	  
 
+//////
     	  //Push the current estimated x,y positon from the Kalman filter's state vector
 
     	  VectorXd estimate(4);

@@ -90,6 +90,13 @@ public:
 
   MatrixXd H_laser_;
 
+  VectorXd z_laser_;
+  VectorXd z_radar_;
+
+
+  MatrixXd NIS_laser_;
+  MatrixXd NIS_radar_;
+
 
 
   /**
@@ -140,7 +147,7 @@ public:
   void PredictRadarMeasurement();
 
 
-
+  void UpdateRadarState();
 
 };
 
